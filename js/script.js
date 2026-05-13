@@ -39,18 +39,20 @@ const modalOverlay = document.querySelector('.modal-overlay');
 const cancelBtn = document.querySelector('.cancel-btn');
 const requestForm = document.querySelector('.request-form');
 
+modalOverlay.classList.add('hidden');
+
 requestDishBtn.addEventListener('click', () => {
 
   modalOverlay.classList.remove('hidden');
 
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('modal-open');
 });
 
 function closeModal() {
 
   modalOverlay.classList.add('hidden');
 
-  document.body.style.overflow = 'auto';
+  document.body.classList.remove('modal-open');
 }
 
 cancelBtn.addEventListener('click', closeModal);
@@ -65,6 +67,13 @@ requestForm.addEventListener('submit', (e) => {
 modalOverlay.addEventListener('click', (e) => {
 
   if (e.target === modalOverlay) {
+    closeModal();
+  }
+});
+
+window.addEventListener('keydown', (e) => {
+
+  if (e.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
     closeModal();
   }
 });
