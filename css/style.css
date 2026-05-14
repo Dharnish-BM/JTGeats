@@ -496,9 +496,8 @@ a {
 }
 .right-arrow {
   right: -20px;
-
-  box-shadow:
-    0 10px 22px rgba(0,0,0,0.12);
+  width: 70px;
+  height: 70px;
 }
 
 .request-dish-btn {
