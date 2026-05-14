@@ -101,12 +101,13 @@ a {
 }
 
 .section-space {
-  padding: 100px 0 20px 0;
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 .section-title2 {
   font-size: 40px;
-  margin-bottom: 63px;
+  margin-bottom: 30px;
   font-weight: 800;
   line-height: 20px;
   letter-spacing: -1.2%;
@@ -253,8 +254,8 @@ a {
   gap: 24px;
 }
 
-.food-card,
-.popular-card {
+
+.food-card {
   position: relative;
   background: white;
   border-radius: 14px;
@@ -263,13 +264,29 @@ a {
   height: 350px;
 }
 
-.food-card:hover,
+.popular-card {
+  position: relative;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  height: 337px;
+  width: 277px;
+}
+
+.food-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
 .popular-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.food-card img,
+.food-card img {
+  height: 250px;
+  object-fit: cover;
+}
 .popular-card img {
   height: 250px;
   object-fit: cover;
