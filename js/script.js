@@ -182,7 +182,7 @@ function renderPopularItems() {
         <div class="rating-box">
 
           <img
-            src="./assets/icons/star.svg"
+            src="./assets/star.svg"
             alt="Rating"
           >
 
@@ -213,7 +213,7 @@ function renderPopularItems() {
           <button class="add-btn">
 
             <img
-              src="./assets/icons/plus.svg"
+              src="./assets/plus.png"
               alt="Add item"
             >
 
