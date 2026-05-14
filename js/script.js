@@ -94,7 +94,7 @@ function renderFoodCards() {
   foodGrid.innerHTML = foodItems.map(item => `
     <article class="food-card">
       ${item.discount ? `<div class="discount-badge">${item.discount}</div>` : ''}
-      <img src="${item.img}" alt="${item.name}" loading="lazy">
+      <img src="${item.img}" alt="${item.name}">
       <div class="card-content">
         <div class="card-top">
           <h3>${item.name}</h3>
