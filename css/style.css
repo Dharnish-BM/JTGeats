@@ -19,23 +19,6 @@
 .footer-social-icon:last-child {
   margin-right: 0;
 }
-/* Icon styling for food cards */
-.icon-star {
-  width: 18px;
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 4px;
-  margin-bottom: 2px;
-  display: inline-block;
-}
-
-.icon-plus {
-  width: 22px;
-  height: 22px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 2px;
-}
 
 .add-btn {
   background: var(--yellow);
@@ -356,6 +339,7 @@ a {
 
 .popular-items {
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .popular-swiper {
@@ -552,6 +536,7 @@ a {
 .footer {
   background: var(--green);
   padding: 40px 0;
+  margin-top: 40px;
 }
 
 .footer-wrapper {
