@@ -1,3 +1,58 @@
+/* Footer white line */
+.footer-line {
+  width: 1180px;
+  max-width: 90%;
+  height: 1px;
+  background: white;
+  border-radius: 1px;
+  border: 1px solid white;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.footer-social-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+.footer-social-icon:last-child {
+  margin-right: 0;
+}
+/* Icon styling for food cards */
+.icon-star {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.icon-plus {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+.add-btn {
+  background: var(--yellow);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.add-btn:hover {
+  background: #ffd600;
+}
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +69,12 @@ body {
   background: #f7f8fa;
 }
 
-img,
-picture,
-video {
+img, picture, video {
   display: block;
   width: 100%;
 }
 
-button,
-input,
-textarea {
+button, input, textarea {
   font: inherit;
 }
 
@@ -69,6 +120,7 @@ a {
 
 .header {
   background: var(--green);
+  height: 800px;
 }
 
 .nav-container {
@@ -80,8 +132,11 @@ a {
 
 .logo {
   color: white;
-  font-size: 24px;
-  font-weight: 700;
+  font-family: 'Squada One', 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: -1.2%;
+  line-height: 20px;
 }
 
 .navbar {
@@ -91,7 +146,10 @@ a {
 
 .navbar a {
   color: white;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -1.2%;
+  line-height: 20px;
 }
 
 .nav-icons {
@@ -113,7 +171,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
 }
 
 .hero-content {
@@ -122,9 +180,12 @@ a {
 
 .hero-content h1 {
   font-size: 70px;
-  line-height: 1.2;
+  line-height: 100%;
   color: white;
   margin-bottom: 30px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
 .hero-content p {
@@ -132,13 +193,16 @@ a {
   max-width: 500px;
   line-height: 1.8;
   margin-bottom: 35px;
+  letter-spacing: -1.2%;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .search-box {
   display: flex;
   overflow: hidden;
   border-radius: 10px;
-  max-width: 450px;
+  max-width: 398px;
 }
 
 .search-box input {
@@ -155,6 +219,10 @@ a {
 
 .hero-image {
   flex: 1;
+  width: 525px;
+  height: 525px;
+  padding-top: 100px;
+  padding-left: 20px;
 }
 
 .hero-image img {
@@ -294,15 +362,18 @@ a {
 }
 
 .request-dish-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 50px auto 0;
-
   background: var(--green);
   color: white;
-
-  padding: 16px 32px;
-
+  padding: 19px 25px;
+  font-size: 16px;
   border-radius: 10px;
+  width: 210px;
+  height: 48px;
+  text-align: center;
 }
 
 
@@ -342,25 +413,22 @@ a {
 }
 
 .custom-video {
-  border-radius: 20px;
   cursor: pointer;
+  width: 877px;
+  height: 442px;
 }
 
 .play-button {
   position: absolute;
-  inset: 0;
-  margin: auto;
-
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 90px;
   height: 90px;
-
   border-radius: 50%;
-
   background: var(--green);
   color: white;
-
   font-size: 34px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,12 +446,21 @@ a {
 }
 
 .contact-content h2 {
-  font-size: 36px;
-  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -1.2%;
+  font-family: Roboto;
+  font-weight: 400;
+  width: 300px;
 }
 
 .contact-content p {
   margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -1.2%;
+  font-weight: 400;
   color: #666;
 }
 
@@ -399,6 +476,11 @@ a {
   border: 1px solid #ddd;
   border-radius: 10px;
   background: white;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -1.2%;
+  font-weight: 400;
+  font-family: Roboto;
 }
 
 .contact-form textarea {
@@ -409,11 +491,11 @@ a {
 
 .contact-form button {
   margin-top: 24px;
-
+  width: 210px;
+  height: 58px;
   background: var(--green);
   color: white;
-
-  padding: 14px 32px;
+  padding: 19px 25px;
   border-radius: 10px;
 }
 
@@ -422,7 +504,8 @@ a {
 }
 
 .contact-image img {
-  width: 400px;
+  width: 500px;
+  height: 400px;
   margin-inline: auto;
 }
 
@@ -444,11 +527,16 @@ a {
 
 .footer-nav a {
   color: white;
+  font-size: 18px;
+  letter-spacing: -1.2%;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: Roboto;
 }
 
 .social-icons {
   display: flex;
-  gap: 16px;
+  gap: 13px;
   color: white;
   font-size: 24px;
 }
