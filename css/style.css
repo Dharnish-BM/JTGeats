@@ -90,10 +90,11 @@ a {
 
 .section-title2 {
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 800;
   color: #101115;
   margin-bottom: 65px;
+  letter-spacing: -1.2%;
 }
 
 .section-title{
@@ -473,44 +474,28 @@ a {
 }
 
 .custom-arrow {
-  position: absolute !important;
-
+  position: absolute;
   top: 50%;
-
   transform: translateY(-50%);
-
-  width: 72px !important;
-  height: 72px !important;
-
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 26px !important;
-
+  width: 48px;
+  height: 48px;
   z-index: 20;
+  background: none;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  display: block;
+  cursor: pointer;
 }
 
 .custom-arrow::after {
   display: none;
 }
 .left-arrow {
-  left: -110px !important;
-
-  background: #ffffff;
-
-  border: 3px solid #1ac073;
-
-  color: #1ac073;
+  left: -20px;
 }
 .right-arrow {
-  right: -110px !important;
-
-  background: #1ac073;
-
-  color: white;
+  right: -20px;
 
   box-shadow:
     0 10px 22px rgba(0,0,0,0.12);
