@@ -145,21 +145,87 @@ const popularItems = [
 function renderPopularItems() {
   const wrapper = document.getElementById('popularItemsWrapper');
   wrapper.innerHTML = popularItems.map(item => `
-    <article class="swiper-slide popular-card${item.discount ? ' active-slide' : ''}">
-      ${item.discount ? `<div class="discount-badge">${item.discount}</div>` : ''}
-      <img src="${item.img}" alt="${item.name}" loading="lazy">
-      <div class="card-content">
-        <div class="card-top">
-          <h3>${item.name}</h3>
-          <span>&#8377;${item.price}</span>
+    <article class="swiper-slide popular-card">
+
+  ${item.discount ? `
+    <div class="discount-badge">
+      ${item.discount}
+    </div>
+  ` : ''}
+
+  <div class="popular-image-wrapper">
+
+    <img
+      src="${item.img}"
+      alt="${item.name}"
+      loading="lazy"
+    >
+
+  </div>
+
+  <div class="card-content">
+
+    <div class="card-top">
+
+      <h3>${item.name}</h3>
+
+      <span class="price">
+        &#8377;${item.price}
+      </span>
+
+    </div>
+
+    <div class="card-bottom">
+
+      <div class="meta-wrapper">
+
+        <div class="rating-box">
+
+          <img
+            src="./assets/icons/star.svg"
+            alt="Rating"
+          >
+
+          <span>${item.rating}</span>
+
         </div>
-        <div class="card-bottom">
-          <div class="rating-box">⭐ ${item.rating}</div>
-          <div class="time-box">${item.time}</div>
-          <button class="add-btn">+</button>
+
+        <div class="time-box">
+          ${item.time}
         </div>
+
       </div>
-    </article>
+
+      ${
+        item.quantity
+          ? `
+          <div class="quantity-controller">
+
+            <button>-</button>
+
+            <span>${item.quantity}</span>
+
+            <button>+</button>
+
+          </div>
+        `
+          : `
+          <button class="add-btn">
+
+            <img
+              src="./assets/icons/plus.svg"
+              alt="Add item"
+            >
+
+          </button>
+        `
+      }
+
+    </div>
+
+  </div>
+
+</article>
   `).join('');
 }
 
